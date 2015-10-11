@@ -12,8 +12,18 @@ print """
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
+    <h1>edunham's HTML/CSS assignment</h1>
+    <p>I balanced my desire to learn more about HTML and CSS with my hated of
+       writing HTML by hand by offloading the boring, repetitive bits to some
+       Python scripts that I built for this purpose. They're <a
+       href="https://github.com/edunham/cs290/tree/master/html_css_assignment">
+       here</a>.
+    </p>
+    <hr>
 """
 multiplicationtable.print_table()
+
+
 #listentries.print_list()
 
 print """
