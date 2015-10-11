@@ -1,6 +1,6 @@
 #! /usr/bin/env python2
 import multiplicationtable
-#import listentries
+import listentries
 import form
 
 print """
@@ -23,8 +23,7 @@ print """
 """
 multiplicationtable.print_table()
 
-
-#listentries.print_list()
+listentries.print_list()
 
 print """
     <div id="outer-content">
