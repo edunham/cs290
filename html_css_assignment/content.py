@@ -1,6 +1,7 @@
 #! /usr/bin/env python2
 import multiplicationtable
-import listentries
+#import listentries
+import form
 
 print """
 <!DOCTYPE html>
@@ -13,7 +14,7 @@ print """
     <body>
 """
 multiplicationtable.print_table()
-listentries.print_list()
+#listentries.print_list()
 
 print """
     <div id="outer-content">
@@ -26,6 +27,11 @@ print """
         It's only a haiku if you read it out loud in English, though.
     </div>
 """
+
+form.print_form('GET')
+
+form.print_form('POST')
+
 
 print """
     </body>
