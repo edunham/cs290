@@ -20,6 +20,7 @@ def print_form(method):
     action = 'http://classes.engr.oregonstate.edu/eecs/winter2015/cs290-400/tools/class-content/form_tests/check_request.php'
     print """
     <form action=%s  method="%s" name = "%sform">
+        <fieldset>
         <legend>Some %s Data</legend> 
     """ % (action, method, method, method)
     input_fieldset('Text','text','text')
@@ -28,13 +29,14 @@ def print_form(method):
 
     print """
         <fieldset>
-            <legend>Select Between:</legend>
+            <p>Select Between:</p>
     """
     button("snickers")
     button("skittles")
     button("mentos")
     print """
         <input type="submit" value="Submit" />
+        </fieldset>
         </fieldset>
     </form>
     """

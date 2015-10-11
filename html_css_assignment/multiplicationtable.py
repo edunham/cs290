@@ -21,7 +21,7 @@ def tr(cell, data):
     print "\t\t</tr>"
 
 def print_table():
-    print "\t<table>"
+    print '\t<table border="1">'
     print "\t<caption>Multiplication Table</caption>"
     timesby = [50,82,9,37,4]
     times = [22, 7, 89, 40, 3]

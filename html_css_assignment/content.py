@@ -26,12 +26,14 @@ print """
         </div>
         It's only a haiku if you read it out loud in English, though.
     </div>
+    <br>
 """
 
 form.print_form('GET')
 
-form.print_form('POST')
+print "    <br>"
 
+form.print_form('POST')
 
 print """
     </body>
