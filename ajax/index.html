@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script>
+      var key = "fa7d80c48643dfadde2cced1b1be6ca1";
+      document.addEventListener("DOMContentLoaded", bindButtons);
+
+      function bindButtons(){
+        document.getElementById('locateSubmit').addEventListener('click', function(event){ 
+          console.log("locatesubmit clicked")
+          var req = new XMLHttpRequest();
+          var where = document.getElementById('locate').value;
+          req.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=Corvallis,or&appid=" + key, false);
+
+          req.addEventListener('load', function(){
+            console.log(JSON.parse(req.responseText));
+            document.getElementById("weather").textContent = req.responseText;
+          });
+
+          req.send(null);
+          event.preventDefault();
+        })
+      }
+    </script>
+  </head>
+  <body>
+    <form>
+        <fieldset>
+        <legend>Weather Map Thing</legend>
+        <input type="text" name="Location" id="locate" value="Corvallis,or">
+        <input type="submit" name="Submit" id="locateSubmit">
+        </fieldset>
+    </form>
+    <div>
+        <span id="weather">Result will appear here</span>
+    </div>
+
+  </body>
+</html>
